@@ -40,5 +40,5 @@ It should be noted that you need to have bower installed to pull the client-side
 
 ## License
 
-Copyright (c) 2013 Lauri Svan, licensed for users and contributors under MIT license.
-https://github.com/laurisvan/backbone-serverside/blob/master/LICENSE-MIT
+Copyright (c) 2013 SC5 Online, licensed for users and contributors under MIT license.
+https://github.com/SC5/backbone-serverside/blob/master/LICENSE-MIT

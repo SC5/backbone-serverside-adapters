@@ -2,7 +2,7 @@
   "name": "backbone-serverside",
   "description": "Backbone replacements and DOM adapters for running it within node.js",
   "version": "0.1.0",
-  "author": "Lauri Svan",
+  "author": "SC5 Online",
   "private": false,
   "keywords": [
     "backbone",
