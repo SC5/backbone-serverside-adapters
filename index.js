@@ -4,6 +4,6 @@ var backbone = require('./lib/backbone'),
 var lib = {
 	backbone: backbone,
 	util: util
-}
+};
 
 exports = module.exports = lib;
