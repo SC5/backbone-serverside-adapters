@@ -24,6 +24,12 @@ server.configure(function() {
 	server.use('/app', express.static(filePath));
 });
 
+// Inject Cheerio adapters
+// FIXME We should have an unified way to inject all the server-side hacks;
+// consider moving this to app-side.
+_.extend(cheerio.prototype, adapters.cheerio);
+
+// Configure RequireJS for the server-side execution
 requirejs.config({
 	nodeRequire: require,
 	baseUrl: 'app',
@@ -31,7 +37,7 @@ requirejs.config({
 	// information to the shims
 	config: {
 		jquery: {
-			jquery: $html 
+			jquery: $html
 		}
 	}
 });
@@ -58,14 +64,14 @@ requirejs(['app', 'backbone'], function (app, Backbone) {
 		app.router.once('done', function(router, status) {
 			// Just a simple workaround in case we timeouted or such
 			if (res.headersSent) {
-				console.warn('Could not respond to request in time; not rendered');
+				console.warn('Could not respond to request in time.');
 			}
 			
 			if (status === 'error') {
 				res.send(500, 'Our framework blew it. Sorry.');
 			}
 			if (status === 'ready') {
-				// Set the bootstrapped attribute to communicate client we're already done for first render
+				// Set the bootstrapped attribute to communicate we're done
 				var $root = $html('#main');
 				$root.attr('data-bootstrapped', true);
 				
