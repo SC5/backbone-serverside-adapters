@@ -1,6 +1,6 @@
 {
-  "name": "backnode-express-example",
-  "version": "0.1.0",
+  "name": "backbone-serverside-express-example",
+  "version": "0.1.1",
   "dependencies": {
     "requirejs": "~2.1.5",
     "jquery": "~1.9.1",
