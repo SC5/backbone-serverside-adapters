@@ -11,7 +11,7 @@
 			text: 'components/requirejs-text/text',
 			underscore: 'components/lodash/dist/lodash.underscore',
 			backbone: 'components/backbone/backbone',
-			handlebars: 'components/handlebars/handlebars',
+			handlebars: 'components/handlebars.js/dist/handlebars',
 			jquery: isBrowser ? 'components/jquery/jquery' : 'emptyHack'
 		},
 		
@@ -45,14 +45,7 @@
 						this.Backbone.ajax = adapters.backbone.ajax;
 						Backbone.$ = $;
 					}
-					
 					return this.Backbone.noConflict();
-				}
-			},
-			'handlebars': {
-				exports: 'Handlebars',
-				init: function() {
-					return this.Handlebars;
 				}
 			}
 		},
@@ -63,6 +56,11 @@
 				// TODO Use full path due to our XHR adapter limitations
 				url: 'http://localhost:8080/api/items'
 			}
+		},
+		
+		// Suppress shim errors when running in Node
+		suppress: {
+			nodeShim: true
 		}
 	});
 	
