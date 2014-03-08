@@ -1,11 +1,11 @@
-var backbone = require('./lib/backbone'),
-	cheerio = require('./lib/cheerio'),
+var cheerio = require('./lib/cheerio'),
+    backbone = require('./lib/backbone'),
 	util = require('./lib/util');
 	
 var lib = {
-	backbone: backbone,
-	cheerio: cheerio,
-	util: util
+  cheerio: cheerio,
+  backbone: backbone,
+  util: util
 };
 
 exports = module.exports = lib;

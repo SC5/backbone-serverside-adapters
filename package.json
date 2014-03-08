@@ -1,23 +1,21 @@
 {
-  "name": "backbone-serverside",
+  "name": "backbone-serverside-adapters",
   "description": "Backbone replacements and DOM adapters for running it within node.js",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "SC5 Online",
-  "homepage": "https://github.com/SC5/backbone-serverside",
+  "homepage": "https://github.com/SC5/backbone-serverside-adapters",
   "bugs": {
-    "url": "http://github.com/owner/project/issues"
+    "url": "https://github.com/SC5/backbone-serverside-adapters/issues"
   },
   "private": false,
   "keywords": [
     "backbone",
-    "browser",
+    "isomorphic",
     "cheerio"
   ],
   "dependencies": {
-    "cheerio": ">=0.10.8",
-    "underscore": "~1.4.4",
-    "xmlhttprequest": "~1.5.0",
-    "node-native-zip": "~1.1.0"
+    "xmlhttprequest": "~1.6.0",
+    "underscore": "~1.6.0"
   },
   "engines": {
     "node": "*"

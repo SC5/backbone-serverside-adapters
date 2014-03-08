@@ -1,15 +1,17 @@
 # Backbone-serverside - Node.js server-side Backbone adapters
 
-This project helps to run [Backbone](http://backbonejs.org/) applications on [node.js](http://nodejs.org/) servers. It includes a few replacements
-of Backbone classes that are DOM dependent (history and view). After this Backbone is still jQuery
-dependent, but e.g. [Cheerio](https://github.com/MatthewMueller/cheerio) can be used for server-side jQuery subset.
+This project helps to run isomorphic [Backbone](http://backbonejs.org/) applications on
+[node.js](http://nodejs.org/) servers. It intends to provide a feasible subset of a set of adapters
+to fill in the blanks of missing DOM and HTML5 APIs on the server side.
 
-The project assumes Node.js on the server side. It is intended as a workaround for the robots
-(so that you would not need to write a separate server-side app for them).
+For more context on the problematics, see e.g. my
+[Mozilla Hacks article](https://hacks.mozilla.org/2013/04/serving-backbone-for-robots-legacy-browsers/) or
+[HTML5 DevConf presentation](http://www.slideshare.net/SC5/2013-0402serversidebackbone-18092755), or for
+another viewpoint, some of [Spike's isomorphic app presentations](http://www.slideshare.net/spikebrehm).
+This project exists for those that don't want to build a full abstraction layer on top of Backbone to hide
+jQuery, XHR and Backbone History API problems.
 
-The service is with Backbone 1.0, yet it might work for earlier or later revisions, too.
-
-If you happen to be in San Francisco for [HTML5DevConf](http://html5devconf.com/), be sure to [attend a presentation](http://html5devconf.com/sessions.html#l_svan) opening up backbone-serverside in more detail.
+The service is tested for Backbone 1.1.x, yet it might work for earlier or later revisions, too.
 
 ## Installation
 
@@ -19,28 +21,22 @@ Installing the project itself is easy. Both build system dependencies and app de
 
 ## Usage
 
-The replacements alone will only take you half-way. Currently the project includes an example on how to apply
-them with [RequireJS](http://requirejs.org/) and Node.js / [Express](http://expressjs.com/). Use it as a boilerplate for your app.
-
-Try the example through the bundled RequireJS + Express version. Within the 'express/requirejs' directory, run
-
-    > bower install
-    > npm install
-
-It should be noted that you need to have bower installed to pull the client-side dependencies.
+The adapters are only useful for an isomorphic application. For an example. You will need to have a
+node.js server stack and an actual app, such as
+[Backbone Serverside, KOA example](https://github.com/SC5/backbone-serverside-koa).
+Fork that, or build one of your own from scatch.
 
 ## TODO
 
-* Write better usage instructions & little bit on the context
-* The server is fragile and likely multiple concurrent requests will cause a lot of headache.
-* Use express-device for detecting robots to better understand on how to deal with different agents
-* Anybody heard of writing tests for your app?
+* The jQuery.ajax emulation is minimal and will likely only work for positive cases for fetching JSON.
+* Anybody heard of writing tests for your library?
 
 ## Release History
 
+* 2014/03/2 - v0.2.0 - Update adapter dependencies; Update XHR; Move example into its own project.
 * 2013/03/25 - v0.1.0 - Initial release
 
 ## License
 
-Copyright (c) 2013 SC5 Online, licensed for users and contributors under MIT license.
-https://github.com/SC5/backbone-serverside/blob/master/LICENSE-MIT
+Copyright (c) 2014 [SC5 Online](http://sc5.io/), licensed for users and contributors under
+[MIT license](http://opensource.org/licenses/MIT).
