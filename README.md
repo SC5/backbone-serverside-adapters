@@ -50,3 +50,7 @@ In short, the adapters could be used like
 
 Copyright (c) 2014 [SC5 Online](http://sc5.io/), licensed for users and contributors under
 [MIT license](http://opensource.org/licenses/MIT).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/SC5/backbone-serverside-adapters/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
