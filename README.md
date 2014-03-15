@@ -26,6 +26,15 @@ node.js server stack and an actual app, such as
 [Backbone Serverside, KOA example](https://github.com/SC5/backbone-serverside-koa).
 Fork that, or build one of your own from scatch.
 
+In short, the adapters could be used like
+
+    var adapters = require('backbone-serverside-adapters'),
+        cheerio = require('cheerio'),
+        Backbone = require('backbone');
+
+    adapters.backbone.inject(Backbone);
+    adapters.cheerio.inject(cheerio);
+
 ## TODO
 
 * The jQuery.ajax emulation is minimal and will likely only work for positive cases for fetching JSON.
@@ -33,6 +42,7 @@ Fork that, or build one of your own from scatch.
 
 ## Release History
 
+* 2014/03/15 - v0.3.0 - API change: adapters inject themselves to Backbone and cheerio
 * 2014/03/2 - v0.2.0 - Update adapter dependencies; Update XHR; Move example into its own project.
 * 2013/03/25 - v0.1.0 - Initial release
 
