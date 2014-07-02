@@ -1,7 +1,7 @@
 {
   "name": "backbone-serverside-adapters",
   "description": "Backbone replacements and DOM adapters for running it within node.js",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "SC5 Online",
   "homepage": "https://github.com/SC5/backbone-serverside-adapters",
   "bugs": {
